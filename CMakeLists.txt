@@ -3,7 +3,7 @@ project(heartbeat)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(heartbeat main.cpp Narrative.cpp Narrative.h Passage.cpp Passage.h Choice.cpp Choice.h)
+add_executable(heartbeat main.cpp Narrative.cpp Narrative.h Passage.cpp Passage.h Choice.cpp Choice.h Graph.cpp Graph.h)
 include_directories(/usr/local/include)
 
 find_package(SFML 2.5 COMPONENTS system window graphics network REQUIRED)
