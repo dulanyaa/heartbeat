@@ -11,12 +11,24 @@
 Graph::Graph(int vertice) {
     V = vertice;
     for (int i = 0; i < V; i++) {
-        adjlist = new std::list<int> [vertice];
+        adjlist = new std::vector<int> [vertice];
     }
 }
+
+Graph::Graph(std::vector<std::vector<int>> edges) {
+    V = edges.size();
+    for (int i = 0; i < V; i++) {
+        if (!edges[i].empty()) {
+            for (int j = 0; j < edges[i].size(); j++) {
+                addEdge(i, edges[i][j]);
+            }
+        }
+    }
+}
+
 void Graph::addEdge(int vertice, int edgeTo) {
     adjlist[vertice].push_back(edgeTo);
-    adjlist[edgeTo].push_back(vertice);
+    //adjlist[edgeTo].push_back(vertice); TODO: is the graph directed or no?
 }
 
 Graph::~Graph() {

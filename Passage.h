@@ -13,14 +13,14 @@
 class Passage {
 private:
     std::string displayText;
-    std::vector<Choice> choices; //need to turn into a map? keep track of what is chosen?
-    Passage next;
-    Passage prev;
+    //std::vector<Choice> choices; //need to turn into a map? keep track of what is chosen?
+    int next;
+    int prev;
     bool isVisited;
 public:
-    void display() {};
-    void goToNext() {};
-    void goToPrev() {};
+    void display();
+    void goToNext();
+    void goToPrev();
 };
 
 

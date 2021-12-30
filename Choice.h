@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-class Choice {
+/*class Choice {
 private:
     std::string choiceText;
     bool isChosen;
@@ -19,7 +19,7 @@ public:
 
 protected:
     void enact() {};
-};
+};*/
 
 
 #endif //HEARTBEAT_CHOICE_H

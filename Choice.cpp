@@ -4,10 +4,10 @@
 
 #include "Choice.h"
 
-void Choice::choose() {
+/*void Choice::choose() {
     isChosen = true;
     Choice::enact();
 }
 Choice::enact() {
-    //TO-DO
-}
+    //
+}*/
