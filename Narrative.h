@@ -4,9 +4,9 @@
 
 #include <iostream>
 #include <vector>
-#include<string>
+#include <string>
 #include "Graph.h"
-#include<unordered_map>
+#include <unordered_map>
 
 #ifndef HEARTBEAT_NARRATIVE_H
 #define HEARTBEAT_NARRATIVE_H
@@ -20,9 +20,9 @@ private:
 
 public:
     Narrative();
-    void newStoryGraph(std::vector< std::vector<int>>);
-    void nextPassage();
-    void prevPassage();
+    std::vector<std::vector<int>> newAdjList();
+    //void nextPassage();
+    //void prevPassage();
     ~Narrative();
 };
 

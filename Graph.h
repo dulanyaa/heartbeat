@@ -17,7 +17,7 @@ private:
 
 public:
     explicit Graph(int V);
-    explicit Graph(std::vector< std::vector<int>>); //index = vertice, list = list of edges it has
+    explicit Graph(std::vector<std::vector<int>>); //index = vertice, list = list of edges it has
     void addEdge(int vertice, int edgeTo); //note: since undirected, must connect both ways?
     ~Graph();
 };

@@ -3,18 +3,19 @@
 //
 #include <iostream>
 #include <vector>
-#include<string>
 #include "Graph.h"
 #include "Narrative.h"
 
 Narrative::Narrative() {
     currentPassage = 0;
     passageID = {{0, "heartbeat"}, {1, "credits"}, {3, "begin"}};
-    storyGraph = new Graph(3);
+    storyGraph = new Graph(newAdjList());
 }
 
-void Narrative::newStoryGraph(std::vector<std::vector<int>> adjList) {
-
+//will be used to read from the file
+std::vector<std::vector<int>> Narrative::newAdjList() {
+    std::vector<std::vector<int>> adjList = {{1, 2}, {}, {}};
+    return adjList;
 }
 
 
