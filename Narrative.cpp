@@ -12,7 +12,7 @@ Narrative::Narrative() {
     storyGraph = new Graph(newAdjList());
 }
 
-//will be used to read from the file
+//will be used eventually to read from the file
 std::vector<std::vector<int>> Narrative::newAdjList() {
     std::vector<std::vector<int>> adjList = {{1, 2}, {}, {}};
     return adjList;

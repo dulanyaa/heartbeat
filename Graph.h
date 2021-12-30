@@ -13,12 +13,13 @@
 class Graph {
 private:
     int V;
-    std::vector<int> *adjlist;
+    std::vector<std::vector<int>> *adjlist;
 
 public:
-    explicit Graph(int V);
+    //explicit Graph(int V);
     explicit Graph(std::vector<std::vector<int>>); //index = vertice, list = list of edges it has
     void addEdge(int vertice, int edgeTo); //note: since undirected, must connect both ways?
+    void printGraph();
     ~Graph();
 };
 
