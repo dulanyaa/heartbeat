@@ -2,14 +2,14 @@
 // Created by Dulanya Cooray on 12/28/21.
 //
 
+#ifndef HEARTBEAT_NARRATIVE_H
+#define HEARTBEAT_NARRATIVE_H
 #include <iostream>
 #include <vector>
 #include <string>
 #include "Graph.h"
 #include <unordered_map>
 
-#ifndef HEARTBEAT_NARRATIVE_H
-#define HEARTBEAT_NARRATIVE_H
 
 
 class Narrative {
@@ -21,9 +21,11 @@ private:
 public:
     Narrative();
     std::vector<std::list<int>> newAdjList();
+    void printGraph();
+    void printGraph(int vertice);
     //void nextPassage();
     //void prevPassage();
-    ~Narrative();
+    //~Narrative();
 };
 
 

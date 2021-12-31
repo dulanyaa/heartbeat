@@ -4,7 +4,6 @@
 
 #ifndef HEARTBEAT_GRAPH_H
 #define HEARTBEAT_GRAPH_H
-
 #include <iostream>
 #include<list>
 #include<vector>
@@ -17,9 +16,9 @@ private:
 
 public:
     //explicit Graph(int V);
-    explicit Graph(std::vector<std::list<int>> edges); //index = vertice, list = list of edges it has
+    explicit Graph(std::vector<std::list<int>> adjacent); //index = vertice, list = list of edges it has
     void addEdge(int vertice, int edgeTo); //note: since undirected, must connect both ways?
-    void printGraph();
+    std::list<int> returnAdjList(int vertice);
     ~Graph();
 };
 

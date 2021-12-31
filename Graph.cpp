@@ -15,28 +15,18 @@
     }
 }*/
 
-Graph::Graph(std::vector<std::list<int>> edges) {
-    V = edges.size();
-    adjlist = edges;
-    for (int i = 0; i < V; i++) {
-        if (!edges[i].empty()) {
-            for (int j = 0; j < edges[i].size(); j++) {
-                addEdge(i, edges[i][j]);
-                //lists dont have immediate access - not an issue since the whole list is
-                // traversed here anyway
-            }
-        }
-    }
+Graph::Graph(std::vector<std::list<int>> adjacent) {
+    V = adjacent.size();
+    adjlist = adjacent;
 }
 
 void Graph::addEdge(int vertice, int edgeTo) {
-
     adjlist[vertice].push_back(edgeTo);
     //adjlist[edgeTo].push_back(vertice); TODO: is the graph directed or no?
 }
 
-void Graph::printGraph() {
-
+std::list<int> Graph::returnAdjList(int vertice) {
+    return adjlist[vertice];
 }
 
 Graph::~Graph() {
