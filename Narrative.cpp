@@ -13,8 +13,8 @@ Narrative::Narrative() {
 }
 
 //will be used eventually to read from the file
-std::vector<std::vector<int>> Narrative::newAdjList() {
-    std::vector<std::vector<int>> adjList = {{1, 2}, {}, {}};
+std::vector<std::list<int>> Narrative::newAdjList() {
+    std::vector<std::list<int>> adjList = {{1, 2}, {}, {}};
     return adjList;
 }
 

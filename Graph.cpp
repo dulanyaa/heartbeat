@@ -15,19 +15,22 @@
     }
 }*/
 
-Graph::Graph(std::vector<std::vector<int>> edges) {
+Graph::Graph(std::vector<std::list<int>> edges) {
     V = edges.size();
-    *adjlist = edges;
+    adjlist = edges;
     for (int i = 0; i < V; i++) {
         if (!edges[i].empty()) {
             for (int j = 0; j < edges[i].size(); j++) {
                 addEdge(i, edges[i][j]);
+                //lists dont have immediate access - not an issue since the whole list is
+                // traversed here anyway
             }
         }
     }
 }
 
 void Graph::addEdge(int vertice, int edgeTo) {
+
     adjlist[vertice].push_back(edgeTo);
     //adjlist[edgeTo].push_back(vertice); TODO: is the graph directed or no?
 }

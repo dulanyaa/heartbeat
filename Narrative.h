@@ -20,7 +20,7 @@ private:
 
 public:
     Narrative();
-    std::vector<std::vector<int>> newAdjList();
+    std::vector<std::list<int>> newAdjList();
     //void nextPassage();
     //void prevPassage();
     ~Narrative();
