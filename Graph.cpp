@@ -8,27 +8,35 @@
 #include<list>
 #include<vector>
 
-/*Graph::Graph(int vertice) {
-    V = vertice;
-    for (int i = 0; i < V; i++) {
-        adjlist = new std::vector<int> [vertice];
-    }
-}*/
 
+/**
+ * Creates a new Graph using the provided adjacency list.
+ * @param adjacent (derived by Narrative)
+ */
 Graph::Graph(std::vector<std::list<int>> adjacent) {
     V = adjacent.size();
     adjlist = adjacent;
 }
 
-void Graph::addEdge(int vertice, int edgeTo) {
-    adjlist[vertice].push_back(edgeTo);
-    //adjlist[edgeTo].push_back(vertice); TODO: is the graph directed or no?
+/**
+ * Add a new edge to be added to the adjacency list
+ * @param edgeTo, vertex
+ */
+void Graph::addEdge(int vertex, int edgeTo) {
+    adjlist[vertex].push_back(edgeTo);
+    //adjlist[edgeTo].push_back(vertex); TODO: is the graph directed or no?
 }
 
-std::list<int> Graph::returnAdjList(int vertice) {
-    return adjlist[vertice];
+/**
+ * Provides the edges of a specified vertex.
+ * @param vertex
+ * @return a list of all the vertexs it is connected to
+ */
+std::list<int> Graph::returnAdjList(int vertex) {
+    return adjlist[vertex];
 }
 
-Graph::~Graph() {
-    //TO-DO
-}
+/**
+ * Destructor: activated when????
+ */
+Graph::~Graph() {}

@@ -16,9 +16,9 @@ private:
 
 public:
     //explicit Graph(int V);
-    explicit Graph(std::vector<std::list<int>> adjacent); //index = vertice, list = list of edges it has
-    void addEdge(int vertice, int edgeTo); //note: since undirected, must connect both ways?
-    std::list<int> returnAdjList(int vertice);
+    explicit Graph(std::vector<std::list<int>> adjacent); //index = vertex, list = list of edges it has
+    void addEdge(int vertex, int edgeTo); //note: since undirected, must connect both ways?
+    std::list<int> returnAdjList(int vertex);
     ~Graph();
 };
 
